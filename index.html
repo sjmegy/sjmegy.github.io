@@ -1,326 +1,310 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Susan J. Megy — Portfolio</title>
+  <meta name="description" content="Writing, speeches, policy briefs, and analysis by Susan J. Megy." />
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --card: #12141a;
+      --text: #e6e6e6;
+      --muted: #a9b0bb;
+      --accent: #7dd3fc; /* cyan-ish */
+      --ring: #2a2f3a;
+      --shadow: rgba(0,0,0,0.45);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --card: #f6f7fb;
+        --text: #111827;
+        --muted: #4b5563;
+        --accent: #0ea5e9;
+        --ring: #e5e7eb;
+        --shadow: rgba(0,0,0,0.08);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 16px 64px; }
+    header { display: grid; gap: 12px; margin-bottom: 24px; }
+    .brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+    .brand h1 { margin: 0; font-size: clamp(20px, 4vw, 34px); letter-spacing: 0.2px; }
+    .tagline { color: var(--muted); font-size: 14px; }
+    .toolbar { display: grid; gap: 12px; grid-template-columns: 1fr; }
+    @media (min-width: 720px) { .toolbar { grid-template-columns: 1fr 240px; align-items: center; } }
+    .search { display: flex; gap: 10px; align-items: center; background: var(--card); border: 1px solid var(--ring); border-radius: 14px; padding: 10px 12px; box-shadow: 0 8px 24px var(--shadow); }
+    .search input { width: 100%; border: 0; outline: none; background: transparent; color: var(--text); font-size: 16px; }
+    .select { appearance: none; width: 100%; background: var(--card); color: var(--text); border: 1px solid var(--ring); border-radius: 14px; padding: 12px 14px; font-size: 15px; box-shadow: 0 8px 24px var(--shadow); }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; }
+    .chip { border: 1px solid var(--ring); background: transparent; color: var(--text); border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer; }
+    .chip.active { background: var(--accent); color: #0a0a0a; border-color: transparent; }
+
+    .grid { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 980px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .card { background: var(--card); border: 1px solid var(--ring); border-radius: 16px; padding: 16px; display: grid; gap: 12px; box-shadow: 0 14px 36px var(--shadow); }
+    .card h3 { margin: 0; font-size: 18px; }
+    .meta { color: var(--muted); font-size: 13px; display: flex; gap: 6px; flex-wrap: wrap; }
+    .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag { font-size: 11px; background: transparent; border: 1px dashed var(--ring); color: var(--muted); padding: 4px 8px; border-radius: 999px; }
+    .desc { font-size: 14px; color: var(--text); opacity: 0.9; }
+    .card a.primary { justify-self: start; text-decoration: none; font-weight: 600; font-size: 14px; color: #0a0a0a; background: var(--accent); border-radius: 10px; padding: 8px 10px; }
+    .card a.secondary { color: var(--muted); font-size: 13px; text-decoration: underline; }
+
+    footer { margin-top: 28px; color: var(--muted); font-size: 13px; display: grid; gap: 8px; }
+    .about { margin: 18px 0 8px; }
+    .muted { color: var(--muted); }
+    .split { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 880px) { .split { grid-template-columns: 2fr 1fr; } }
+
+    /* Focus styles for accessibility */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
   </style>
 </head>
 <body>
-<p class="p1"><b>&lt;!doctype html&gt;</b></p>
-<p class="p1"><b>&lt;html lang="en"&gt;</b></p>
-<p class="p1"><b>&lt;head&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;title&gt;Susan J. Megy — Portfolio&lt;/title&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;meta name="description" content="Writing, speeches, policy briefs, and analysis by Susan J. Megy." /&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;style&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>:root {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>--bg: #0b0c0f;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>--card: #12141a;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>--text: #e6e6e6;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>--muted: #a9b0bb;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>--accent: #7dd3fc; /* cyan-ish */</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>--ring: #2a2f3a;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>--shadow: rgba(0,0,0,0.45);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>@media (prefers-color-scheme: light) {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>:root {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>--bg: #ffffff;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>--card: #f6f7fb;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>--text: #111827;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>--muted: #4b5563;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>--accent: #0ea5e9;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>--ring: #e5e7eb;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>--shadow: rgba(0,0,0,0.08);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>}</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>* { box-sizing: border-box; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>html, body { height: 100%; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>body {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>margin: 0;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>background: var(--bg);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>color: var(--text);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>line-height: 1.55;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.wrap { max-width: 1100px; margin: 0 auto; padding: 28px 16px 64px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>header { display: grid; gap: 12px; margin-bottom: 24px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.brand { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.brand h1 { margin: 0; font-size: clamp(20px, 4vw, 34px); letter-spacing: 0.2px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.tagline { color: var(--muted); font-size: 14px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.toolbar { display: grid; gap: 12px; grid-template-columns: 1fr; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>@media (min-width: 720px) { .toolbar { grid-template-columns: 1fr 240px; align-items: center; } }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.search { display: flex; gap: 10px; align-items: center; background: var(--card); border: 1px solid var(--ring); border-radius: 14px; padding: 10px 12px; box-shadow: 0 8px 24px var(--shadow); }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.search input { width: 100%; border: 0; outline: none; background: transparent; color: var(--text); font-size: 16px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.select { appearance: none; width: 100%; background: var(--card); color: var(--text); border: 1px solid var(--ring); border-radius: 14px; padding: 12px 14px; font-size: 15px; box-shadow: 0 8px 24px var(--shadow); }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.chip { border: 1px solid var(--ring); background: transparent; color: var(--text); border-radius: 999px; padding: 6px 12px; font-size: 13px; cursor: pointer; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.chip.active { background: var(--accent); color: #0a0a0a; border-color: transparent; }</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.grid { display: grid; gap: 14px; grid-template-columns: 1fr; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>@media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>@media (min-width: 980px) { .grid { grid-template-columns: repeat(3, 1fr); } }</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.card { background: var(--card); border: 1px solid var(--ring); border-radius: 16px; padding: 16px; display: grid; gap: 12px; box-shadow: 0 14px 36px var(--shadow); }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.card h3 { margin: 0; font-size: 18px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.meta { color: var(--muted); font-size: 13px; display: flex; gap: 6px; flex-wrap: wrap; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.tags { display: flex; gap: 6px; flex-wrap: wrap; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.tag { font-size: 11px; background: transparent; border: 1px dashed var(--ring); color: var(--muted); padding: 4px 8px; border-radius: 999px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.desc { font-size: 14px; color: var(--text); opacity: 0.9; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.card a.primary { justify-self: start; text-decoration: none; font-weight: 600; font-size: 14px; color: #0a0a0a; background: var(--accent); border-radius: 10px; padding: 8px 10px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.card a.secondary { color: var(--muted); font-size: 13px; text-decoration: underline; }</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>footer { margin-top: 28px; color: var(--muted); font-size: 13px; display: grid; gap: 8px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.about { margin: 18px 0 8px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.muted { color: var(--muted); }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>.split { display: grid; gap: 14px; grid-template-columns: 1fr; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>@media (min-width: 880px) { .split { grid-template-columns: 2fr 1fr; } }</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>/* Focus styles for accessibility */</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;/style&gt;</b></p>
-<p class="p1"><b>&lt;/head&gt;</b></p>
-<p class="p1"><b>&lt;body&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>&lt;header&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;div class="brand"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;h1 id="siteTitle"&gt;Susan J. Megy&lt;/h1&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;span class="tagline" id="siteTag"&gt;Speechwriting • Policy Analysis • Public Affairs&lt;/span&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;div class="toolbar" role="search"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;label class="search" aria-label="Search portfolio"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"&gt;&lt;path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"/&gt;&lt;/svg&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;input id="q" type="search" placeholder="Search by title, outlet, topic, year…" autocomplete="off" /&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;/label&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;select class="select" id="sort"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;option value="newest"&gt;Sort: Newest first&lt;/option&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;option value="oldest"&gt;Sort: Oldest first&lt;/option&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;option value="title"&gt;Sort: Title A→Z&lt;/option&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;option value="outlet"&gt;Sort: Outlet A→Z&lt;/option&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;/select&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;div id="filters" class="filters" aria-label="Topic filters"&gt;&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>&lt;/header&gt;</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>&lt;main class="split"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;section&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;div id="list" class="grid" aria-live="polite"&gt;&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;/section&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;aside&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;h3&gt;About&lt;/h3&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;p class="desc" id="about"&gt;&lt;/p&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;div class="meta"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">            </span>&lt;a id="emailLink" class="secondary" href="#"&gt;Email&lt;/a&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">            </span>&lt;span&gt;•&lt;/span&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">            </span>&lt;a id="resumeLink" class="secondary" href="#"&gt;Resume&lt;/a&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;div class="card"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;h3&gt;How this works&lt;/h3&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;p class="desc"&gt;This is a single HTML file. Edit the &lt;code&gt;DATA&lt;/code&gt; section below to add items. Host it free on GitHub Pages or Netlify. No build tools, no recurring fees, no nonsense.&lt;/p&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;ul class="muted" style="margin:0; padding-left:18px; font-size: 13px;"&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">            </span>&lt;li&gt;Put PDFs in a &lt;code&gt;/files&lt;/code&gt; folder and link them.&lt;/li&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">            </span>&lt;li&gt;Or paste external URLs to outlets or Substack.&lt;/li&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">            </span>&lt;li&gt;Use tags to group pieces: e.g., &lt;em&gt;Iraq&lt;/em&gt;, &lt;em&gt;Education&lt;/em&gt;, &lt;em&gt;Op‑ed&lt;/em&gt;.&lt;/li&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;/ul&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;/aside&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>&lt;/main&gt;</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>&lt;footer&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>&lt;div&gt;© &lt;span id="year"&gt;&lt;/span&gt; &lt;span id="name"&gt;&lt;/span&gt;. Built with static HTML. Zero tracking.&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>&lt;/footer&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;/div&gt;</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;!-- ==========================</b></p>
-<p class="p1"><b><span class="Apple-converted-space">       </span>DATA: Edit below. No build step needed.</b></p>
-<p class="p1"><b><span class="Apple-converted-space">       </span>Each item:</b></p>
-<p class="p1"><b><span class="Apple-converted-space">       </span>{ id, title, outlet, date: "YYYY-MM-DD", url, desc, tags: ["…"], type }</b></p>
-<p class="p1"><b><span class="Apple-converted-space">       </span>========================== --&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;script&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>const SITE = {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>name: "Susan J. Megy",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>tag: "Speechwriting • Public Affairs • Policy Analysis",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>about: "Author, Speechwriter and Public‑Affairs strategist with an Eye on Humanitarian Law/Protection, educational equity, and policy storytelling. Speechwriter to former U.S. Secretary of Education; veteran of UN missions and crisis contexts.",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>email: "mailto:susan@susanjmegy.com",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>resume: "files/Susan_Megy_Resume.pdf"</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>};</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>const ITEMS = [</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>{</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>id: "oped-2025",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>title: "Starvation as a Weapon of War In Sudan: Can International Humanitarian Law Still Protect?",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>outlet: "Springer Press",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>date: "2026-03-15",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>url: "https://link.springer.com/collections/dbjgdhbjda",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>desc: "Op‑ed connecting IHL language to operational choices that constrain humanitarian access.",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>tags: ["IHL", "Humanitarian", "Sudan", "Article"],</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>type: "Article"</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>},</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>{</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>id: "cardona-speech-2024",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>title: "Raising the Bar for Education Equity",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>outlet: "Remarks for the Secretary of Education",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>date: "2024-05-18",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>url: "files/Cardona_Raising_the_Bar.pdf",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>desc: "Keynote on pathways beyond college, HBCUs, and accountability for predatory programs.",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>tags: ["Education", "Speechwriting", "Equity"],</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>type: "Speech"</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>},</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>{</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>id: "iraq-brief-2020",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>title: "Iraq’s Tenuous Security Architecture in a Post-ISIL World",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>outlet: "ICRC Humanitarian Law &amp; Policy Blog",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>date: "2020-09-21",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>url: "https://example.com/icrc-iraq",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>desc: "Analysis of PMF integration, Peshmerga dynamics, and implications for civilian protection.",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>tags: ["Iraq", "Analysis", "Protection"],</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>type: "Analysis"</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>{</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>id: "unique-id",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>title: "An Analysis of Human Rights Legislation in Iraq",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>outlet: "Publication / Event",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>date: "YYYY-MM-DD",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>url: "https://link-to-piece-or-/files/YourFile.pdf",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>desc: "One-liner about what this is and why it matters.",</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>tags: ["Humanitarian", "Iraq", "Op-ed"],</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>type: "Op-ed" // optional label</b></p>
-<p class="p1"><b>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p2"><b><span class="Apple-converted-space">      </span></b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>// Add more entries above this line.</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>];</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;/script&gt;</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;!-- ==========================</b></p>
-<p class="p1"><b><span class="Apple-converted-space">       </span>APP: Filtering, search, sort. No frameworks.</b></p>
-<p class="p1"><b><span class="Apple-converted-space">       </span>========================== --&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;script&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>const $ = (sel, el=document) =&gt; el.querySelector(sel);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>const $$ = (sel, el=document) =&gt; Array.from(el.querySelectorAll(sel));</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function formatDate(iso){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const d = new Date(iso + 'T12:00:00');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (Number.isNaN(d.getTime())) return iso;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>return d.toLocaleDateString(undefined, {year:'numeric', month:'short'});</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function uniqueTags(items){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const set = new Set();</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>items.forEach(i =&gt; (i.tags||[]).forEach(t =&gt; set.add(t)));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>return Array.from(set).sort((a,b)=&gt;a.localeCompare(b));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function applySort(items, how){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const by = how || 'newest';</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const arr = [...items];</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (by === 'newest') arr.sort((a,b)=&gt; (b.date||'').localeCompare(a.date||''));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (by === 'oldest') arr.sort((a,b)=&gt; (a.date||'').localeCompare(b.date||''));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (by === 'title') arr.sort((a,b)=&gt; a.title.localeCompare(b.title));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (by === 'outlet') arr.sort((a,b)=&gt; a.outlet.localeCompare(b.outlet));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>return arr;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function normalize(str){ return (str||'').toLowerCase(); }</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function searchItems(items, q){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (!q) return items;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const s = normalize(q);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>return items.filter(i =&gt; [i.title, i.outlet, i.desc, (i.tags||[]).join(' '), i.type, i.date]</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>.join(' ').toLowerCase().includes(s));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function renderFilters(allItems){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const box = $('#filters');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>box.innerHTML = '';</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const tags = uniqueTags(allItems);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const urlTag = new URL(location).searchParams.get('tag');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const active = new Set(urlTag ? [urlTag] : []);</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const add = (label) =&gt; {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>const b = document.createElement('button');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>b.className = 'chip' + (active.has(label) ? ' active' : '');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>b.textContent = label;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>b.onclick = () =&gt; {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>if (active.has(label)) active.delete(label); else active.add(label);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>renderList(allItems, {tags: Array.from(active)});</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>// update URL param for shareable filter</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>const url = new URL(location);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>url.searchParams.delete('tag');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>if (active.size === 1) url.searchParams.set('tag', Array.from(active)[0]);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>history.replaceState({}, '', url);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>renderFilters(allItems);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>};</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>box.appendChild(b);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>};</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (tags.length) add('All');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>tags.forEach(add);</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>// Make "All" behave like clearing</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const allBtn = Array.from(box.children).find(btn =&gt; btn.textContent === 'All');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (allBtn){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>if (active.size === 0) allBtn.classList.add('active');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>allBtn.onclick = () =&gt; { active.clear(); renderList(allItems, {tags: []}); history.replaceState({}, '', new URL(location).toString().split('?')[0]); renderFilters(allItems); };</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>}</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function renderList(allItems, opts={}){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const q = $('#q').value.trim();</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const sort = $('#sort').value;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const tags = new Set(opts.tags || []);</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>let items = searchItems(allItems, q);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (tags.size) items = items.filter(i =&gt; (i.tags||[]).some(t =&gt; tags.has(t)));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>items = applySort(items, sort);</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>const list = $('#list');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>list.innerHTML = '';</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>if (!items.length){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>list.innerHTML = `&lt;div class="card"&gt;&lt;h3&gt;No results&lt;/h3&gt;&lt;p class="desc"&gt;Try removing filters or searching different keywords.&lt;/p&gt;&lt;/div&gt;`;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>return;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>items.forEach(i =&gt; {</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>const el = document.createElement('article');</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>el.className = 'card';</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>el.innerHTML = `</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;h3&gt;${i.title}&lt;/h3&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;div class="meta"&gt;${i.outlet ? i.outlet + ' • ' : ''}${i.date ? formatDate(i.date) : ''}&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;p class="desc"&gt;${i.desc || ''}&lt;/p&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;div class="tags"&gt;${(i.tags||[]).map(t=&gt;`&lt;span class="tag"&gt;${t}&lt;/span&gt;`).join('')}&lt;/div&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">          </span>&lt;a class="primary" href="${i.url}" target="_blank" rel="noopener"&gt;Read&lt;/a&gt;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>`;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">        </span>list.appendChild(el);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>});</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>function boot(){</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#siteTitle').textContent = SITE.name;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#siteTag').textContent = SITE.tag;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#about').textContent = SITE.about;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#emailLink').href = SITE.email; $('#resumeLink').href = SITE.resume;</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#year').textContent = new Date().getFullYear();</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#name').textContent = SITE.name;</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#q').addEventListener('input', ()=&gt;renderList(ITEMS));</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>$('#sort').addEventListener('change', ()=&gt;renderList(ITEMS));</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>renderFilters(ITEMS);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">      </span>renderList(ITEMS);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>}</b></p>
-<p class="p2"><b></b><br></p>
-<p class="p1"><b><span class="Apple-converted-space">    </span>document.addEventListener('DOMContentLoaded', boot);</b></p>
-<p class="p1"><b><span class="Apple-converted-space">  </span>&lt;/script&gt;</b></p>
-<p class="p1"><b>&lt;/body&gt;</b></p>
-<p class="p1"><b>&lt;/html&gt;</b></p>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1 id="siteTitle">Susan J. Megy</h1>
+        <span class="tagline" id="siteTag">Speechwriting • Policy Analysis • Public Affairs</span>
+      </div>
+      <div class="toolbar" role="search">
+        <label class="search" aria-label="Search portfolio">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14"/></svg>
+          <input id="q" type="search" placeholder="Search by title, outlet, topic, year…" autocomplete="off" />
+        </label>
+        <select class="select" id="sort">
+          <option value="newest">Sort: Newest first</option>
+          <option value="oldest">Sort: Oldest first</option>
+          <option value="title">Sort: Title A→Z</option>
+          <option value="outlet">Sort: Outlet A→Z</option>
+        </select>
+      </div>
+      <div id="filters" class="filters" aria-label="Topic filters"></div>
+    </header>
+
+    <main class="split">
+      <section>
+        <div id="list" class="grid" aria-live="polite"></div>
+      </section>
+      <aside>
+        <div class="card">
+          <h3>About</h3>
+          <p class="desc" id="about"></p>
+          <div class="meta">
+            <a id="emailLink" class="secondary" href="#">Email</a>
+            <span>•</span>
+            <a id="resumeLink" class="secondary" href="#">Resume</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>How this works</h3>
+          <p class="desc">This is a single HTML file. Edit the <code>DATA</code> section below to add items. Host it free on GitHub Pages or Netlify. No build tools, no recurring fees, no nonsense.</p>
+          <ul class="muted" style="margin:0; padding-left:18px; font-size: 13px;">
+            <li>Put PDFs in a <code>/files</code> folder and link them.</li>
+            <li>Or paste external URLs to outlets or Substack.</li>
+            <li>Use tags to group pieces: e.g., <em>Iraq</em>, <em>Education</em>, <em>Op‑ed</em>.</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> <span id="name"></span>. Built with static HTML. Zero tracking.</div>
+    </footer>
+  </div>
+
+  <!-- ==========================
+       DATA: Edit below. No build step needed.
+       Each item:
+       { id, title, outlet, date: "YYYY-MM-DD", url, desc, tags: ["…"], type }
+       ========================== -->
+  <script>
+    const SITE = {
+      name: "Susan J. Megy",
+      tag: "Speechwriting • Public Affairs • Policy Analysis",
+      about: "Author, Speechwriter and Public‑Affairs strategist with an Eye on Humanitarian Law/Protection, educational equity, and policy storytelling. Speechwriter to former U.S. Secretary of Education; veteran of UN missions and crisis contexts.",
+      email: "mailto:susan@susanjmegy.com",
+      resume: "files/Susan_Megy_Resume.pdf"
+    };
+
+    const ITEMS = [
+      {
+        id: "oped-2025",
+        title: "Starvation as a Weapon of War In Sudan: Can International Humanitarian Law Still Protect?",
+        outlet: "Springer Press",
+        date: "2026-03-15",
+        url: "https://link.springer.com/collections/dbjgdhbjda",
+        desc: "Op‑ed connecting IHL language to operational choices that constrain humanitarian access.",
+        tags: ["IHL", "Humanitarian", "Sudan", "Article"],
+        type: "Article"
+      },
+      {
+        id: "cardona-speech-2024",
+        title: "Raising the Bar for Education Equity",
+        outlet: "Remarks for the Secretary of Education",
+        date: "2024-05-18",
+        url: "files/Cardona_Raising_the_Bar.pdf",
+        desc: "Keynote on pathways beyond college, HBCUs, and accountability for predatory programs.",
+        tags: ["Education", "Speechwriting", "Equity"],
+        type: "Speech"
+      },
+      {
+        id: "iraq-brief-2020",
+        title: "Iraq’s Tenuous Security Architecture in a Post-ISIL World",
+        outlet: "ICRC Humanitarian Law & Policy Blog",
+        date: "2020-09-21",
+        url: "https://example.com/icrc-iraq",
+        desc: "Analysis of PMF integration, Peshmerga dynamics, and implications for civilian protection.",
+        tags: ["Iraq", "Analysis", "Protection"],
+        type: "Analysis"
+      {
+  id: "unique-id",
+  title: "An Analysis of Human Rights Legislation in Iraq",
+  outlet: "Publication / Event",
+  date: "YYYY-MM-DD",
+  url: "https://link-to-piece-or-/files/YourFile.pdf",
+  desc: "One-liner about what this is and why it matters.",
+  tags: ["Humanitarian", "Iraq", "Op-ed"],
+  type: "Op-ed" // optional label
+}
+
+      
+      // Add more entries above this line.
+    ];
+  </script>
+
+  <!-- ==========================
+       APP: Filtering, search, sort. No frameworks.
+       ========================== -->
+  <script>
+    const $ = (sel, el=document) => el.querySelector(sel);
+    const $$ = (sel, el=document) => Array.from(el.querySelectorAll(sel));
+
+    function formatDate(iso){
+      const d = new Date(iso + 'T12:00:00');
+      if (Number.isNaN(d.getTime())) return iso;
+      return d.toLocaleDateString(undefined, {year:'numeric', month:'short'});
+    }
+
+    function uniqueTags(items){
+      const set = new Set();
+      items.forEach(i => (i.tags||[]).forEach(t => set.add(t)));
+      return Array.from(set).sort((a,b)=>a.localeCompare(b));
+    }
+
+    function applySort(items, how){
+      const by = how || 'newest';
+      const arr = [...items];
+      if (by === 'newest') arr.sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+      if (by === 'oldest') arr.sort((a,b)=> (a.date||'').localeCompare(b.date||''));
+      if (by === 'title') arr.sort((a,b)=> a.title.localeCompare(b.title));
+      if (by === 'outlet') arr.sort((a,b)=> a.outlet.localeCompare(b.outlet));
+      return arr;
+    }
+
+    function normalize(str){ return (str||'').toLowerCase(); }
+
+    function searchItems(items, q){
+      if (!q) return items;
+      const s = normalize(q);
+      return items.filter(i => [i.title, i.outlet, i.desc, (i.tags||[]).join(' '), i.type, i.date]
+        .join(' ').toLowerCase().includes(s));
+    }
+
+    function renderFilters(allItems){
+      const box = $('#filters');
+      box.innerHTML = '';
+      const tags = uniqueTags(allItems);
+      const urlTag = new URL(location).searchParams.get('tag');
+      const active = new Set(urlTag ? [urlTag] : []);
+
+      const add = (label) => {
+        const b = document.createElement('button');
+        b.className = 'chip' + (active.has(label) ? ' active' : '');
+        b.textContent = label;
+        b.onclick = () => {
+          if (active.has(label)) active.delete(label); else active.add(label);
+          renderList(allItems, {tags: Array.from(active)});
+          // update URL param for shareable filter
+          const url = new URL(location);
+          url.searchParams.delete('tag');
+          if (active.size === 1) url.searchParams.set('tag', Array.from(active)[0]);
+          history.replaceState({}, '', url);
+          renderFilters(allItems);
+        };
+        box.appendChild(b);
+      };
+
+      if (tags.length) add('All');
+      tags.forEach(add);
+
+      // Make "All" behave like clearing
+      const allBtn = Array.from(box.children).find(btn => btn.textContent === 'All');
+      if (allBtn){
+        if (active.size === 0) allBtn.classList.add('active');
+        allBtn.onclick = () => { active.clear(); renderList(allItems, {tags: []}); history.replaceState({}, '', new URL(location).toString().split('?')[0]); renderFilters(allItems); };
+      }
+    }
+
+    function renderList(allItems, opts={}){
+      const q = $('#q').value.trim();
+      const sort = $('#sort').value;
+      const tags = new Set(opts.tags || []);
+
+      let items = searchItems(allItems, q);
+      if (tags.size) items = items.filter(i => (i.tags||[]).some(t => tags.has(t)));
+      items = applySort(items, sort);
+
+      const list = $('#list');
+      list.innerHTML = '';
+
+      if (!items.length){
+        list.innerHTML = `<div class="card"><h3>No results</h3><p class="desc">Try removing filters or searching different keywords.</p></div>`;
+        return;
+      }
+
+      items.forEach(i => {
+        const el = document.createElement('article');
+        el.className = 'card';
+        el.innerHTML = `
+          <h3>${i.title}</h3>
+          <div class="meta">${i.outlet ? i.outlet + ' • ' : ''}${i.date ? formatDate(i.date) : ''}</div>
+          <p class="desc">${i.desc || ''}</p>
+          <div class="tags">${(i.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+          <a class="primary" href="${i.url}" target="_blank" rel="noopener">Read</a>
+        `;
+        list.appendChild(el);
+      });
+    }
+
+    function boot(){
+      $('#siteTitle').textContent = SITE.name;
+      $('#siteTag').textContent = SITE.tag;
+      $('#about').textContent = SITE.about;
+      $('#emailLink').href = SITE.email; $('#resumeLink').href = SITE.resume;
+      $('#year').textContent = new Date().getFullYear();
+      $('#name').textContent = SITE.name;
+
+      $('#q').addEventListener('input', ()=>renderList(ITEMS));
+      $('#sort').addEventListener('change', ()=>renderList(ITEMS));
+
+      renderFilters(ITEMS);
+      renderList(ITEMS);
+    }
+
+    document.addEventListener('DOMContentLoaded', boot);
+  </script>
 </body>
 </html>
