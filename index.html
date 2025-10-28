@@ -11,7 +11,7 @@
       --card: #12141a;
       --text: #e6e6e6;
       --muted: #a9b0bb;
-      --accent: #7dd3fc; /* cyan-ish */
+      --accent: #7dd3fc;
       --ring: #2a2f3a;
       --shadow: rgba(0,0,0,0.45);
     }
@@ -68,7 +68,6 @@
     .split { display: grid; gap: 14px; grid-template-columns: 1fr; }
     @media (min-width: 880px) { .split { grid-template-columns: 2fr 1fr; } }
 
-    /* Focus styles for accessibility */
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
   </style>
 </head>
@@ -100,18 +99,31 @@
       </section>
       <aside>
         <div class="card">
-          
-        
+          <h3>About</h3>
+          <p class="desc" id="about"></p>
+          <div class="meta">
+            <a id="emailLink" class="secondary" href="#">Email</a>
+            <span>•</span>
+            <a id="resumeLink" class="secondary" href="#">Resume</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>How this works</h3>
+          <p class="desc">This is a single HTML file. Edit the <code>DATA</code> section below to add items. Host it free on GitHub Pages or Netlify. No build tools, no recurring fees, no nonsense.</p>
+          <ul class="muted" style="margin:0; padding-left:18px; font-size: 13px;">
+            <li>Put PDFs in a <code>/files</code> folder and link them.</li>
+            <li>Or paste external URLs to outlets or Substack.</li>
+            <li>Use tags to group pieces: e.g., <em>Iraq</em>, <em>Education</em>, <em>Op‑ed</em>.</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
     <footer>
       <div>© <span id="year"></span> <span id="name"></span>. Built with static HTML. Zero tracking.</div>
     </footer>
   </div>
 
-  <!-- ==========================
-       DATA: Edit below. No build step needed.
-       Each item:
-       { id, title, outlet, date: "YYYY-MM-DD", url, desc, tags: ["…"], type }
-       ========================== -->
   <script>
     const SITE = {
       name: "Susan J. Megy",
@@ -151,25 +163,10 @@
         desc: "Analysis of PMF integration, Peshmerga dynamics, and implications for civilian protection.",
         tags: ["Iraq", "Analysis", "Protection"],
         type: "Analysis"
-      {
-  id: "unique-id",
-  title: "An Analysis of Human Rights Legislation in Iraq",
-  outlet: "Publication / Event",
-  date: "YYYY-MM-DD",
-  url: "https://link-to-piece-or-/files/YourFile.pdf",
-  desc: "One-liner about what this is and why it matters.",
-  tags: ["Humanitarian", "Iraq", "Op-ed"],
-  type: "Op-ed" // optional label
-}
-
-      
-      // Add more entries above this line.
+      }
     ];
   </script>
 
-  <!-- ==========================
-       APP: Filtering, search, sort. No frameworks.
-       ========================== -->
   <script>
     const $ = (sel, el=document) => el.querySelector(sel);
     const $$ = (sel, el=document) => Array.from(el.querySelectorAll(sel));
@@ -219,7 +216,6 @@
         b.onclick = () => {
           if (active.has(label)) active.delete(label); else active.add(label);
           renderList(allItems, {tags: Array.from(active)});
-          // update URL param for shareable filter
           const url = new URL(location);
           url.searchParams.delete('tag');
           if (active.size === 1) url.searchParams.set('tag', Array.from(active)[0]);
@@ -232,7 +228,6 @@
       if (tags.length) add('All');
       tags.forEach(add);
 
-      // Make "All" behave like clearing
       const allBtn = Array.from(box.children).find(btn => btn.textContent === 'All');
       if (allBtn){
         if (active.size === 0) allBtn.classList.add('active');
@@ -264,7 +259,7 @@
           <h3>${i.title}</h3>
           <div class="meta">${i.outlet ? i.outlet + ' • ' : ''}${i.date ? formatDate(i.date) : ''}</div>
           <p class="desc">${i.desc || ''}</p>
-          <div class="tags">${(i.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+          <div class="tags">${(i.tags||[]).map(t=>'<span class="tag">'+t+'</span>').join('')}</div>
           <a class="primary" href="${i.url}" target="_blank" rel="noopener">Read</a>
         `;
         list.appendChild(el);
@@ -288,5 +283,3 @@
 
     document.addEventListener('DOMContentLoaded', boot);
   </script>
-</body>
-</html>
